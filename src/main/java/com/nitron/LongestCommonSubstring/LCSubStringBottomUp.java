@@ -26,7 +26,7 @@ public class LCSubStringBottomUp {
                     count = matrix[i][j];
             }
 
-return count;
+        return count;
     }
 
 
