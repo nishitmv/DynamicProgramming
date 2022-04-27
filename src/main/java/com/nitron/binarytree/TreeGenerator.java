@@ -4,8 +4,7 @@ import java.util.List;
 
 public class TreeGenerator {
 
-    public void generateTree(List<Integer> values)
-    {
+    public void generateTree(List<Integer> values) {
 
         Tree tree = new Tree();
         values.forEach(value -> {
@@ -18,52 +17,44 @@ public class TreeGenerator {
         });
 
         var root = tree.getRootNode();
-      //  traverse(root);
+        //  traverse(root);
         System.out.println(height(root));
     }
 
-    private void insert( TreeNode node, Integer value) {
+    private void insert(TreeNode node, Integer value) {
 
-        if(node.getValue()>value)
-        {
-            if(node.getLeft()!=null){
+        if (node.getValue() > value) {
+            if (node.getLeft() != null) {
                 insert(node.getLeft(), value);
-            }
-            else {
+            } else {
                 TreeNode newNode = new TreeNode(value, node);
                 node.setLeft(newNode);
             }
-        }
-        else if(node.getValue()<value )
-        {
-            if(node.getRight()!=null){
-                insert( node.getRight(), value);
-            }
-            else {
+        } else if (node.getValue() < value) {
+            if (node.getRight() != null) {
+                insert(node.getRight(), value);
+            } else {
                 TreeNode newNode = new TreeNode(value, node);
                 node.setRight(newNode);
             }
         }
     }
 
-    private void traverse(TreeNode node)
-    {
+    private void traverse(TreeNode node) {
 
-        if(node.getLeft()!=null)
+        if (node.getLeft() != null)
             traverse(node.getLeft());
         System.out.println(node.getValue());
-        if(node.getRight()!=null)
+        if (node.getRight() != null)
             traverse(node.getRight());
     }
 
-    private int height(TreeNode node)
-    {
-        if(node!=null) {
+    private int height(TreeNode node) {
+        if (node != null) {
 
-            int height =  1+Math.max(height(node.getLeft()), height(node.getRight()));
+            int height = 1 + Math.max(height(node.getLeft()), height(node.getRight()));
             System.out.println(height);
             return height;
-        }
-        else return 0;
+        } else return 0;
     }
 }

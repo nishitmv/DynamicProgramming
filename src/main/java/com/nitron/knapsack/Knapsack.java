@@ -1,7 +1,5 @@
 package com.nitron.knapsack;
 
-import java.util.Arrays;
-
 public class Knapsack {
     Integer[][] matrix;
 

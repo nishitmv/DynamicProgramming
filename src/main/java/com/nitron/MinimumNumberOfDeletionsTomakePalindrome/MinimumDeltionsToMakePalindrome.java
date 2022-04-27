@@ -1,14 +1,16 @@
-package com.nitron.LongestPalindromeSubsequence;
+package com.nitron.MinimumNumberOfDeletionsTomakePalindrome;
 
-public class LongestPalindromeSubSequence {
+public class MinimumDeltionsToMakePalindrome {
 
     Integer[][] matrix;
 
-    public int calcLPS(String str1) {
+    public int calcMinNumofDels(String str1) {
 
         matrix = new Integer[str1.length() + 1][str1.length() + 1];
 
-        return calcLCS(str1, new StringBuilder(str1).reverse().toString(), str1.length(), str1.length());
+        int lcsLength = calcLCS(str1, new StringBuilder(str1).reverse().toString(), str1.length(), str1.length());
+
+        return str1.length() - lcsLength;
 
     }
 

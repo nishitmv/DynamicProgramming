@@ -8,30 +8,29 @@ public class MinInsDelToTransform {
 
         int lcsLength = calcLCS(str1.toCharArray(), str2.toCharArray(), m, n);
 
-        int deletions = m-lcsLength;
-        int additions = n-lcsLength;
+        int deletions = m - lcsLength;
+        int additions = n - lcsLength;
 
         System.out.println("Number of Deletions " + deletions);
-        System.out.println("Number of Additions "+ additions);
+        System.out.println("Number of Additions " + additions);
 
     }
 
     private int calcLCS(char[] str1, char[] str2, int m, int n) {
 
-        int[][] matrix = new int[m+1][n+1];
+        int[][] matrix = new int[m + 1][n + 1];
 
-        for(int i =0;i<m+1;i++)
+        for (int i = 0; i < m + 1; i++)
             matrix[i][0] = 0;
-        for(int j =0;j<m+1;j++)
+        for (int j = 0; j < m + 1; j++)
             matrix[0][j] = 0;
 
-        for(int i=1;i<m+1;i++)
-            for(int j=1;j<n+1;j++)
-            {
-                if(str1[i-1] == str2[j-1])
-                    matrix[i][j] = 1+matrix[i-1][j-1];
+        for (int i = 1; i < m + 1; i++)
+            for (int j = 1; j < n + 1; j++) {
+                if (str1[i - 1] == str2[j - 1])
+                    matrix[i][j] = 1 + matrix[i - 1][j - 1];
                 else
-                    matrix[i][j] = Math.max(matrix[i][j-1], matrix[i-1][j]);
+                    matrix[i][j] = Math.max(matrix[i][j - 1], matrix[i - 1][j]);
 
             }
         return matrix[m][n];
