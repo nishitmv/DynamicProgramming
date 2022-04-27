@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.LongestCommonSubstring;
+package com.nitron.stringsubsequenceproblems.LongestCommonSubstring;
 
 public class LCSubStringBottomUp {
 

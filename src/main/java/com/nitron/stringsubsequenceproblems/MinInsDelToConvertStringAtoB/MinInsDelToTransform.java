@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.MinInsDelToConvertStringAtoB;
+package com.nitron.stringsubsequenceproblems.MinInsDelToConvertStringAtoB;
 
 public class MinInsDelToTransform {
     public void calcMinInsDel(String str1, String str2) {

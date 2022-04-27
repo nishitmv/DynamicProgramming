@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.MinimumNumberOfDeletionsTomakePalindrome;
+package com.nitron.stringsubsequenceproblems.MinimumNumberOfDeletionsTomakePalindrome;
 
 public class MinimumDeltionsToMakePalindrome {
 

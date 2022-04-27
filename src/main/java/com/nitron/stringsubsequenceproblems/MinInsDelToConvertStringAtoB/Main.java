@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.MinInsDelToConvertStringAtoB;
+package com.nitron.stringsubsequenceproblems.MinInsDelToConvertStringAtoB;
 
 public class Main {
 

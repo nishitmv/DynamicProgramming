@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.longestCommionSubsequence;
+package com.nitron.stringsubsequenceproblems.longestCommionSubsequence;
 
 public class LongestCommonSubSequence {
 

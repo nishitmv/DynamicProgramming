@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.LongestPalindromeSubsequence;
+package com.nitron.stringsubsequenceproblems.LongestPalindromeSubsequence;
 
 public class LongestPalindromeSubSequence {
 

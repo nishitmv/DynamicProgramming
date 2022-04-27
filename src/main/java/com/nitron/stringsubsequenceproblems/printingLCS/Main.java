@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.printingLCS;
+package com.nitron.stringsubsequenceproblems.printingLCS;
 
 public class Main {
 

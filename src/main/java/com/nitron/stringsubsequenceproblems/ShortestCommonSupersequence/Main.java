@@ -1,4 +1,4 @@
-package com.nitron.stringsubsequence.ShortestCommonSupersequence;
+package com.nitron.stringsubsequenceproblems.ShortestCommonSupersequence;
 
 public class Main {
 
