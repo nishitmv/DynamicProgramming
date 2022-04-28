@@ -22,35 +22,13 @@ public class SubsetSum {
             return true;
         if (n == 0)
             return false;
+        if (matrix[n][sum] != null)
+            return matrix[n][sum];
 
         if (arr[n - 1] <= sum) {
-
-            if (matrix[n][sum] != null) {
-                var val = matrix[n][sum];
-
-                System.out.println("FOUND : " + n + " " + sum + " " + " " + val);
-                return val;
-            } else {
-
-                boolean val = checkSubsetSum(arr, sum - arr[n - 1], n - 1) || checkSubsetSum(arr, sum, n - 1);
-                matrix[n][sum] = val;
-                System.out.println("MATRIX ");
-                for (Boolean[] arr1 : matrix) {
-                    for (Boolean val1 : arr1)
-                        System.out.print(val1 + " ");
-                    System.out.println();
-                }
-                return val;
-            }
+                return matrix[n][sum] = checkSubsetSum(arr, sum - arr[n - 1], n - 1) || checkSubsetSum(arr, sum, n - 1);
         } else {
-            boolean val = checkSubsetSum(arr, sum, n - 1);
-            matrix[n][sum] = val;
-            for (Boolean[] arr1 : matrix) {
-                for (Boolean val1 : arr1)
-                    System.out.print(val1 + " ");
-                System.out.println();
-            }
-            return val;
+                return  matrix[n][sum] =  checkSubsetSum(arr, sum, n - 1);
         }
     }
 }
