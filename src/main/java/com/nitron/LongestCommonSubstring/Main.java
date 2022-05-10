@@ -1,4 +1,4 @@
-package com.nitron.binarytree.LongestCommonSubstring;
+package com.nitron.LongestCommonSubstring;
 
 public class Main {
 
