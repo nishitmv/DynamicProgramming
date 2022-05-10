@@ -4,7 +4,7 @@ import java.util.List;
 
 public class TreeGenerator {
 
-    public void generateTree(List<Integer> values) {
+    public Tree generateTree(List<Integer> values) {
 
         Tree tree = new Tree();
         values.forEach(value -> {
@@ -18,7 +18,8 @@ public class TreeGenerator {
 
         var root = tree.getRootNode();
         //  traverse(root);
-        System.out.println(height(root));
+       // System.out.println(height(root));
+        return tree;
     }
 
     private void insert(TreeNode node, Integer value) {
@@ -29,6 +30,7 @@ public class TreeGenerator {
             } else {
                 TreeNode newNode = new TreeNode(value, node);
                 node.setLeft(newNode);
+
             }
         } else if (node.getValue() < value) {
             if (node.getRight() != null) {
@@ -36,20 +38,21 @@ public class TreeGenerator {
             } else {
                 TreeNode newNode = new TreeNode(value, node);
                 node.setRight(newNode);
+
             }
         }
     }
 
-    private void traverse(TreeNode node) {
-
+    public void traverse(TreeNode node) {
+        System.out.println(node.getValue());
         if (node.getLeft() != null)
             traverse(node.getLeft());
-        System.out.println(node.getValue());
+
         if (node.getRight() != null)
             traverse(node.getRight());
     }
 
-    private int height(TreeNode node) {
+    public int height(TreeNode node) {
         if (node != null) {
 
             int height = 1 + Math.max(height(node.getLeft()), height(node.getRight()));
