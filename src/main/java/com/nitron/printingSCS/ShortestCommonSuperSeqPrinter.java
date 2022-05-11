@@ -20,15 +20,17 @@ public class ShortestCommonSuperSeqPrinter {
                 }
                 else{
                     if(matrix[i-1][j]>matrix[i][j-1]) {
-                        builder.append(str1[i-1]);
+                        builder.append(str1[i-1]); // Append String 1 non common subsequence
                         i--;
                     }
                     else {
-                        builder.append(str2[j-1]);
+                        builder.append(str2[j-1]);// Append String 2 non common subsequence
                         j--;
                     }
                     }
             }
+
+        // NOW APPEND THE REMAINING PART OF str1 and str2
         while(i>0) {
             builder.append(str1[i - 1]);
             i--;
@@ -37,7 +39,7 @@ public class ShortestCommonSuperSeqPrinter {
             builder.append(str2[j - 1]);
             j--;
         }
-        System.out.println(builder.reverse().toString());
+        System.out.println(builder.reverse());
     }
 
     private int calcLCS(char[] str1, char[] str2, int m, int n) {

@@ -8,11 +8,11 @@ public class EqualSumPartitioner {
         int sum = 0;
         for (int i : arr)
             sum += i;
-        if (sum % 2 != 0)
+        if (sum % 2 != 0) // check if sum of array is even else return false;
             return false;
         else {
             matrix = new Boolean[sum + 1][size + 1];
-            return subsetSum(arr, sum / 2, size);
+            return subsetSum(arr, sum / 2, size); // Check if there is a subset sum equal to half of total sum , if true obviously can be partitioned into 2
         }
     }
 
