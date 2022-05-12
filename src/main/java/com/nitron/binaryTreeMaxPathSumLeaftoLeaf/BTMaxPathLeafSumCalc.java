@@ -21,7 +21,7 @@ public class BTMaxPathLeafSumCalc {
 
         if(rootNode.getLeft()==null && rootNode.getRight()==null)
         {
-            sumToPassToParent =  Math.max(rootNode.getValue(), rootNode.getValue());
+            sumToPassToParent =  Math.max(rootNode.getValue(), sumToPassToParent);
         }
 
         int maxofAll = Math.max(currNodeSum, sumToPassToParent);
