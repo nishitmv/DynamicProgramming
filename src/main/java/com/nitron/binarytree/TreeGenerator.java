@@ -22,6 +22,11 @@ public class TreeGenerator {
         return tree;
     }
 
+    private void insertInOrder(TreeNode node, Integer value)
+    {
+
+    }
+
     private void insert(TreeNode node, Integer value) {
 
         if (node.getValue() > value) {
