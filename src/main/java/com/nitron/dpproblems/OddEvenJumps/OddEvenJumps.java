@@ -55,6 +55,7 @@ public class OddEvenJumps {
             }
         }
 
+        // return true if i reached the end , i.e its a valid path from i to n with odd and even jumps ( high and low jumps)
         return i == n;
     }
 }
